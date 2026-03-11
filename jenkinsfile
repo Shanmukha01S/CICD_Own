@@ -44,7 +44,7 @@ WLS_JAR="/home/shanmukha/Oracle/Middleware/Oracle_Home/wlserver/server/lib/weblo
                      -adminurl ${WL_URL} \
               -user ${WL_USER} -password ${WL_PASSWORD} \
               -deploy -name practice-app \
-              -source /target/practice-app.war \
+              -source target/practice-app.war \
               -targets AppCluster
              -upload
 
