@@ -7,7 +7,7 @@ environment{
 WL_USER="weblogic"
 WL_PASSWORD="Shan@1998"
 WL_URL="t3://localhost:7001"
-WL_NM="MS1,MS2"
+WL_NM="AppCluster"
 
 }
     
@@ -39,11 +39,12 @@ WL_NM="MS1,MS2"
              
              sh """
 
-             java weblogic.deployer -adminurl ${WL_URL} \
+             java -cp \${WLS_JAR} weblogic.deployer -adminurl ${WL_URL} \
               -user ${WL_USER} -password ${WL_PASSWORD} \
               -deploy -name practice-app \
               -source   /home/shanmukha/.jenkins/workspace/Practice_CICD_Own/target/pratice-app.war \
               -targets AppCluster
+             -upload
 
                   """
 
