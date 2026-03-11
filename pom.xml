@@ -1,4 +1,4 @@
-cat <<EOF > pom.xml
+cat <EOF > pom.xml
 <project xmlns="http://apache.org" 
          xmlns:xsi="http://w3.org"
          xsi:schemaLocation="http://apache.org http://apache.org">
