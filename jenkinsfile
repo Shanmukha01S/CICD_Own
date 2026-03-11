@@ -1,0 +1,28 @@
+cat <<EOF > Jenkinsfile
+pipeline {
+    agent any
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        
+        stage('Build WAR') {
+            steps {
+                // Runs the Maven command we tested earlier
+                sh 'mvn clean package'
+            }
+        }
+        
+        stage('Archive Artifact') {
+            steps {
+                // Saves the .war file in Jenkins for later use
+                archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
+            }
+        }
+    }
+}
+EOF
+
