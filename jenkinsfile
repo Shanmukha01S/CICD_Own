@@ -42,8 +42,8 @@ WL_NM="MS1,MS2"
              java weblogic.deployer -adminurl ${WL_URL} \
               -user ${WL_USER} -password ${WL_PASSWORD} \
               -deploy -name practice-app \
-              -source target/pratice-app.war \
-              -targets ms1,ms2
+              -source   /home/shanmukha/.jenkins/workspace/Practice_CICD_Own/target/pratice-app.war \
+              -targets AppCluster
 
                   """
 
