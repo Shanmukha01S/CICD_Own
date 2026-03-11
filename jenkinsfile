@@ -29,6 +29,8 @@ WL_NM="MS1,MS2"
             steps {
                 // Saves the .war file in Jenkins for later use
                 archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
+}
+}
         
 
           stage('Deploy to weblogic'){
@@ -48,6 +50,4 @@ WL_NM="MS1,MS2"
             }
         }
     }
-}
-
 }
